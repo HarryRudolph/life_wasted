@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const daysPerMonth = document.getElementById('days-per-month');
     const workWeeksPerYear = document.getElementById('work-weeks-per-year');
     const workWeeksLifetime = document.getElementById('work-weeks-lifetime');
-    const donateBtn = document.getElementById('donate-btn');
     const normalProgress = document.getElementById('normal-progress');
     const wastedProgress = document.getElementById('wasted-progress');
     const normalAge = document.getElementById('normal-age');
@@ -17,9 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event listeners
     calculateBtn.addEventListener('click', handleCalculate);
     wastedHoursInput.addEventListener('input', handleCalculate);
-    donateBtn.addEventListener('click', function() {
-        alert('Thank you for considering a donation! This is a demo, so no actual payment processing is implemented.');
-    });
     
     // Function to handle calculate button and progressive reveal
     function handleCalculate() {
@@ -32,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const statsSection = document.querySelector('.stats-section');
         const visualizationSection = document.querySelector('.visualization-section');
         const explanationSection = document.querySelector('.explanation');
-        const donateSection = document.querySelector('.donate-section');
         
         // Show visualization section first and start animation
         setTimeout(() => {
@@ -52,11 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             explanationSection.classList.add('visible');
         }, 1400);
-        
-        // Show donate section last
-        setTimeout(() => {
-            donateSection.classList.add('visible');
-        }, 2000);
     }
     
     // Helper function to format time in the most appropriate unit
