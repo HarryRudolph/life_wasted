@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Wasted Visualizer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Life Wasted</h1>
+        <p class="subtitle">How much of your life do you knowingly waste?</p>
+        
+        <div class="input-section">
+            <label for="wasted-hours">Hours wasted per day:</label>
+            <input type="number" id="wasted-hours" min="0" max="16" step="0.5" value="2">
+            <button id="calculate-btn">Calculate</button>
+        </div>
+        
+        <div class="visualization-section">
+            <h2>Life Progression Visualization</h2>
+            <div class="progress-container">
+                <div class="progress-info">
+                    <span>Normal Life Progress</span>
+                    <span id="normal-age">0</span>
+                </div>
+                <div class="progress-bar">
+                    <div id="normal-progress" class="progress-fill"></div>
+                </div>
+                <div class="progress-info">
+                    <span>Life with Wasted Time</span>
+                    <span id="wasted-age">0</span>
+                </div>
+                <div class="progress-bar">
+                    <div id="wasted-progress" class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="stats-section">
+            <h2>Time Wasted</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Time Wasted Per Week</h3>
+                    <p id="time-per-week">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Days Wasted Per Month</h3>
+                    <p id="days-per-month">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Work Weeks Wasted Per Year</h3>
+                    <p id="work-weeks-per-year">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Work Weeks Wasted Per Lifetime</h3>
+                    <p id="work-weeks-lifetime">0</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="explanation">
+            <p>Based on 8 hours of sleep per day, you have 16 waking hours. Time you waste is time that could be spent working or being productive.</p>
+        </div>
+        
+        <div class="donate-section">
+            <p>Help cover hosting costs for this site</p>
+            <button id="donate-btn">Donate</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
