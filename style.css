@@ -16,6 +16,8 @@ body {
     border-radius: 12px;
     padding: 40px;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    min-height: auto;
+    height: auto;
 }
 
 h1 {
@@ -96,13 +98,17 @@ h1 {
 }
 
 .stats-section {
-    margin-bottom: 50px;
+    margin-bottom: 0;
+    max-height: 0;
+    overflow: hidden;
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 0.6s ease, transform 0.6s ease, max-height 0.6s ease, margin-bottom 0.6s ease;
 }
 
 .stats-section.visible {
+    margin-bottom: 50px;
+    max-height: 1000px;
     opacity: 1;
     transform: translateY(0);
 }
@@ -156,13 +162,16 @@ h1 {
 }
 
 .visualization-section {
-    margin-bottom: 50px;
+    margin-bottom: 0;
+    max-height: 0;
+    overflow: hidden;
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 0.6s ease, transform 0.6s ease, max-height 0.6s ease, margin-bottom 0.6s ease;
 }
 
 .visualization-section.visible {
+    max-height: 1000px;
     opacity: 1;
     transform: translateY(0);
 }
@@ -218,63 +227,21 @@ h1 {
     background: #18181b;
     border: 1px solid #27272a;
     border-radius: 8px;
-    padding: 24px;
     text-align: center;
     color: #a1a1aa;
-    margin-bottom: 40px;
     font-size: 14px;
     line-height: 1.6;
+    max-height: 0;
+    overflow: hidden;
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 0.6s ease, transform 0.6s ease, max-height 0.6s ease, margin-bottom 0.6s ease;
 }
 
 .explanation.visible {
+    max-height: 1000px;
     opacity: 1;
     transform: translateY(0);
-}
-
-.donate-section {
-    text-align: center;
-    padding: 30px;
-    background: #18181b;
-    border: 1px solid #27272a;
-    border-radius: 8px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.donate-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.donate-section p {
-    font-size: 16px;
-    color: #a1a1aa;
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-
-.donate-section button {
-    background: #ef4444;
-    color: #fef2f2;
-    border: none;
-    padding: 12px 24px;
-    font-size: 14px;
-    font-family: 'Fira Code', monospace;
-    font-weight: 500;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.1s;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.donate-section button:hover {
-    background: #dc2626;
-    transform: translateY(-1px);
 }
 
 @media (max-width: 768px) {
